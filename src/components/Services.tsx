@@ -2,19 +2,16 @@ import React, { useRef, useState, useEffect } from 'react';
 import { ARTICLES_DATA } from '../constants';
 import type { Article } from '../types';
 
-const CertificationCard: React.FC<{ article: Article }> = ({ article }) => (
-    <a
-        href={article.url}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="block bg-surface dark:bg-slate-800 rounded-2xl shadow-lg overflow-hidden group transition-transform duration-300 hover:-translate-y-2 border border-border-color dark:border-violet-800"
-    >
+const CertificationCard: React.FC<{ article: Article }> = ({ article }) => {
+    const cardClass = "block bg-surface dark:bg-slate-800 rounded-2xl shadow-lg overflow-hidden group border border-border-color dark:border-violet-800";
+
+    const content = (
         <div className="flex flex-col md:flex-row">
             <div className="md:w-1/3 lg:w-1/4 shrink-0 overflow-hidden">
                 <img src={article.image} alt={article.title} className="w-full h-48 md:h-full object-cover transition-transform duration-300 group-hover:scale-110" />
             </div>
             <div className="p-6 flex flex-col justify-center">
-                <h3 className="text-xl font-semibold text-text-primary dark:text-slate-50 mb-2 group-hover:text-primary transition-colors">{article.title}</h3>
+                <h3 className="text-xl font-semibold text-text-primary dark:text-slate-50 mb-2">{article.title}</h3>
                 <p className="text-text-secondary dark:text-slate-400 text-sm">{article.description}</p>
                 <div className="flex flex-wrap gap-2 mt-3">
                     {article.tags.map(tag => (
@@ -23,8 +20,18 @@ const CertificationCard: React.FC<{ article: Article }> = ({ article }) => (
                 </div>
             </div>
         </div>
-    </a>
-);
+    );
+
+    if (article.url && article.url !== '#') {
+        return (
+            <a href={article.url} target="_blank" rel="noopener noreferrer" className={cardClass}>
+                {content}
+            </a>
+        );
+    }
+
+    return <div className={cardClass}>{content}</div>;
+};
 
 const Certifications: React.FC = () => {
     const sectionRef = useRef<HTMLElement>(null);
@@ -61,7 +68,7 @@ const Certifications: React.FC = () => {
         >
             <div className="text-left mb-12">
                 <h1 className="text-4xl lg:text-3xl font-bold text-text-primary dark:text-slate-50">Certifications & Learning Journey</h1>
-                <p className="text-text-secondary dark:text-slate-400 mt-2">A collection of my completed certifications and learning milestones showcasing continuous growth in AI, Machine Learning, and Web Development.</p>
+                <p className="text-text-secondary dark:text-slate-400 mt-2">A collection of my completed certifications and learning milestones showcasing continuous growth in UI/UX Designing and Web Development.</p>
             </div>
             <div className="space-y-8">
                 {ARTICLES_DATA.map((article, index) => (

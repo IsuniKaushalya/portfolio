@@ -3,13 +3,15 @@ import type { NavLink, SocialLink, Article, ArticleListItem, Education, Detailed
 import sclLogo from './images/scl.png';
 import uwuLogo from './images/uwu.jpg';
 import at1 from './images/at1.png';
-import at2 from './images/at2.png';
-import at3 from './images/at3.png';
-import at4 from './images/at4.png';
+import at2 from './images/at2.jpg';
+import at3 from './images/at3.jpg';
+import at4 from './images/at4.jpg';
 import at5 from './images/at5.png';
+import at6 from './images/at6.png';
 import project1 from './images/project1.png';
 import project3 from './images/project3.png';
 import project4 from './images/project4.png';
+import project5 from './images/project5.png';
 import img1 from './images/img1.jpg';
 import img2 from './images/img2.jpeg';
 import img3 from './images/img3.jpeg';
@@ -147,73 +149,110 @@ export const EDUCATION_DATA: Education[] = [
     },
     {
         icon: <img src={sclLogo} alt="Asoka Vidyalaya Colombo 10 logo" className="h-12 w-12 object-contain bg-white rounded p-1" />,
-        institution: 'Asoka Vidyalaya, Colombo 10',
+        institution: 'Badulla Central College, Badulla',
         degree: 'Advanced Level in Physical Science stream',
-        period: '2017 - 2020',
+        period: '2011 - 2020',
     },
 ];
 
 export const ARTICLES_DATA: Article[] = [
     {
         image: at1,
-        title: 'AI/ML Engineer - Stage 1',
-        description: 'A beginner-friendly guide to understanding the Kubernetes Control Plane, explaining its components, functions, and how it manages cluster operations effectively.',
-        url: 'https://code.sliit.org/certificates/po4uw1rzih',
-        tags: ['Artificial Intelligence', 'Machine Learning', 'PyTorch'],
+        title: 'Introduction to Figma',
+        description: 'A comprehensive introduction to Figma, focusing on high-fidelity mobile UI design, navigation systems, and status bar integration for professional portfolio projects.',
+        url: 'https://simpli-web.app.link/e/7D1pWK2AL2b',
+        tags: ['Figma', 'UI/UX Design', 'Prototyping'],
     },
     {
         image: at2,
-        title: 'Intro to Machine Learning',
-        description: 'Learn the core ideas in machine learning, and build your first models.',
-        url: 'https://www.kaggle.com/learn/certification/htddezoysa/intro-to-machine-learning',
-        tags: ['Machine Learning', 'Supervised Learning', 'Python'],
+        title: 'SHECODERess <V6.0> – Championship Winner',
+        description: 'Awarded for winning the "Hack & Design Showdown" organized by the IEEE Women in Engineering Student Branch at Uva Wellassa University of Sri Lanka. Role as a member of team "Bit Belles..',
+        url: 'https://www.linkedin.com/posts/isuni-kaushalya-70944537b_shecoderess-wif-designathon-activity-7392054463634780160-M8rj?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF3cCbkBBCe2ZkCAk0ercHxqpPJHOorA4yI',
+        tags: ['Hackathon', 'UI/UX Design', 'Creative thinking', 'Problem Solving'],
     },
     {
         image: at3,
-        title: 'Getting Started with Machine Learning Algorithms',
-        description: 'An introductory course covering the fundamentals of machine learning algorithms. It provides hands-on exposure to key supervised learning techniques such as Linear Regression, Logistic Regression, Decision Trees, Random Forests, SVM, and KNN, offering a solid foundation for beginners in ML.',
-        url: 'https://simpli-web.app.link/e/Ovh12adpdSb',
-        tags: ['Machine Learning', 'Random forest', 'Linear regression'],
+        title: 'The Complete Mobile App UX/UI Design Course',
+        description: 'An introductory course covering the fundamentals of mobile app UX/UI design. It provides hands-on exposure to key design principles and tools, offering a solid foundation for beginners in UI/UX Design.',
+        url: 'https://www.udemy.com/certificate/UC-095cacc3-06c3-4e16-90f4-b5aa98280a4c/',
+        tags: ['Mobile App Design', 'UI/UX Design', 'Prototyping'],
     },
     {
         image: at4,
-        title: 'Prompt Engineering with ChatGPT',
-        description: 'This course introduces the art of crafting effective prompts to enhance ChatGPT’s performance and generate high quality, context aware responses. It covers techniques for handling complex queries, optimizing AI outputs, and applying prompt engineering across content creation, marketing, and professional communication.',
-        url: 'https://simpli-web.app.link/e/lu2sQyw5lUb',
-        tags: ['Prompt Engineering', 'Generative AI', 'LLMs'],
+        title: 'Dean’s List for Outstanding Academic Performance',
+        description: 'Awarded for achieving exceptional academic results within the Faculty of Applied Sciences during the Semester I of the 200 Level Academic Year 2023/2024 at Uva Wellassa University of Sri Lanka.',
+        url: 'https://www.linkedin.com/posts/isuni-kaushalya-70944537b_deanslist-academicexcellence-computerscience-activity-7392251930279989248-r7dV?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF3cCbkBBCe2ZkCAk0ercHxqpPJHOorA4yI',
+        tags: ['Computer Science', 'Academic Excellence'],
     },
     {
         image: at5,
         title: 'HTML, CSS, JavaScript, React - Online Certification Course',
-        description: 'TA comprehensive course covering the foundations of web development, from building structured and responsive web pages with HTML and CSS to adding interactivity using JavaScript. It also introduces React for developing dynamic web applications, focusing on key concepts like state management, props, and events, along with practical hands-on projects.',
-        url: 'https://www.udemy.com/certificate/UC-f07e8b19-4896-45b9-8adf-4a8376843ef3/',
+        description: 'A comprehensive course covering the foundations of web development, from building structured and responsive web pages with HTML and CSS to adding interactivity using JavaScript. It also introduces React for developing dynamic web applications, focusing on key concepts like state management, props, and events, along with practical hands-on projects.',
+        url: 'https://www.udemy.com/certificate/UC-095cacc3-06c3-4e16-90f4-b5aa98280a4c/',
         tags: ['React', 'Web Development', 'JavaScript'],
+    },
+    {
+        image: at6,
+        title: 'Introduction to Graphic Design; Basics of UI/UX',
+        description: 'A foundational course covering essential principles of graphic design and the core fundamentals of User Interface and User Experience design.',
+        url: 'https://simpli-web.app.link/e/Ncvb1bZCL2b',
+        tags: ['Design Foundations', 'Graphic Design', 'UI/UX Design'],
     }
 ];
 
 export const DETAILED_PROJECTS_DATA: DetailedProject[] = [
     {
         image: project1,
-        title: 'HomePoint - Enterprise Resource & Construction Project Management System',
-        description: `A full stack web solution developed by a 4 member team to streamline construction project workflows from planning to execution. It features multi project dashboards, inventory and budget tracking, real time collaboration, and an innovative face recognition attendance system powered by AWS Rekognition. Built with Next.js, Node.js, MongoDB, and AWS, this project showcases enterprise level functionality, cloud integration, and responsive design optimized for construction site use.`,
-        tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Material-UI', 'Redux Toolkit', 'Node.js', 'Express.js', 'MongoDB', 'Socket.IO', 'AWS Rekognition', 'JWT Authentication'],
-        demoUrl: 'https://www.linkedin.com/posts/tharindu-devinda-978905278_constructiontech-projectmanagement-fullstackdevelopment-activity-7392471884761640960-USNT?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEPEEywBnzEtYWPOfzbx8hBL8Iex1zMsqYs',
+        title: 'Vibeset - Event Booking and Management System',
+        description: `VibeSet is a dashboard designed to help event organizers efficiently manage events, track bookings, and gain insights into attendee engagement. The goal was to create a clean and intuitive interface that allows users to quickly understand key metrics and make informed decisions.`,
+        tags: ['Figma', 'Web Dashboard', 'UI/UX Design'],
+        demoUrl: 'https://www.figma.com/design/o6aGH1Nvn2GHWJlpxoEuAZ/Event-Booking-and-Managing-App?node-id=4-10&t=Rw37fN43UZUDghZ7-1',
         featured: true,
+        caseStudy: {
+            overview: 'VibeSet is a web-based dashboard concept created to simplify event management. The platform focuses on providing a clear overview of event performance, booking data, and attendee insights in a single interface. The goal was to design a system that allows users to quickly understand key information without navigating through complex data.',
+            problem: 'Managing events involves handling large amounts of data such as bookings, attendees, and performance metrics. Many existing systems present this information in a cluttered and confusing way, which makes it difficult to track bookings, get clear insights, and maintain good data visibility.',
+            solution: 'VibeSet solves this by introducing a clean, structured dashboard layout, visual data representation through charts, and easy navigation between key sections. The design focuses on making information accessible, readable, and actionable.',
+            visualDesign: {
+                colorDirection: 'The interface uses a dark theme with royal purple accents to create a modern and premium feel. Dark backgrounds reduce visual strain, purple highlights guide user attention, and neutral tones maintain balance and readability.',
+                typography: 'A clear hierarchy was used with large text for key metrics, medium headings for sections, and smaller text for supporting information.',
+            },
+            designDecisions: [
+                'Card-based layout for better readability',
+                'Use of charts to simplify complex data',
+                'Consistent spacing and alignment',
+                'Minimalist approach to avoid clutter',
+            ],
+            challenges: [
+                'Managing large data without overwhelming users',
+                'Maintaining consistency across multiple sections',
+                'Designing meaningful data visualizations',
+            ],
+            outcome: 'The final design presents a clean and intuitive dashboard that improves data visibility and enhances the overall user experience for event management.',
+            finalNote: 'This project helped improve skills in dashboard design, data visualization, and creating user-centered interfaces.',
+        },
     },
     {
         image: project4,
         title: 'TaskOra - where tasks find their flow',
         description: 'A 2 member group project developed to simplify task tracking and improve team productivity. The system enables users to create, assign, and manage tasks with real time status updates, secure role based access, and personalized dashboards. Built with a clean glass morphism UI and JWT aware caching, it supports efficient workflows and seamless collaboration between team members.',
-        tags: ['Nextjs ', 'NestJS ', 'TypeScript', 'Tailwind CSS', 'PostgreSQL', 'Prisma ORM', 'JWT'],
-        demoUrl: '',
+        tags: ['Nextjs ', 'NestJS ', 'TypeScript', 'Tailwind CSS', 'PostgreSQL', 'Prisma ORM', 'Figma'],
+        demoUrl: 'https://www.linkedin.com/posts/isuni-kaushalya-70944537b_nextjs-react-typescript-ugcPost-7395887053927825408-sUJt?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF3cCbkBBCe2ZkCAk0ercHxqpPJHOorA4yI',
         featured: true,  // ← Add this to feature it on the home page
     },
     {
         image: project3,
-        title: 'poultryPro',
-        description: 'A 4 member group project developed to streamline farm management and support online product sales for poultry farmers. The platform allows farmers to manage their poultry operations, track farm activities, and sell products through an integrated marketplace, connecting multiple farmers with customers online.',
-        tags: ['JavaScript', 'bootstrap', 'HTML', 'php'],
-        demoUrl: 'https://www.linkedin.com/posts/haamidhansak_projectcompletion-teamwork-poultrymanagement-activity-7256167199504007168-Mndm?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEPEEywBnzEtYWPOfzbx8hBL8Iex1zMsqYs',
+        title: 'FoodPick - Food Delivery App',
+        description: 'FoodPick is a personal UI/UX design project focused on creating a clean and engaging mobile interface for a food delivery application. The design emphasizes visual hierarchy, usability, and a smooth browsing experience, allowing users to quickly explore food items and make decisions with ease. The main objective was to design a modern “Home” screen where food becomes the central focus while maintaining clarity in essential details like pricing, ratings, and navigation.',
+        tags: ['Mobile Design', 'UI/UX Design', 'Figma'],
+        demoUrl: 'https://www.behance.net/gallery/245185169/FoodPick-Mobile-UI-Design-Practice',
+        featured: true,  // ← Add this to feature it on the home page
+    },
+    {
+        image: project5,
+        title: 'UvaXplore - Research Project Management Platform',
+        description: 'UvaXplore is a web-based platform designed to manage and streamline multiple research projects while improving collaboration between students and instructors. The system provides a structured environment where users can track progress, share updates, and manage project-related activities efficiently.',
+        tags: ['Web Design', 'UI/UX Design', 'Figma'],
+        demoUrl: 'https://www.figma.com/design/gDKds3lsqLcI7pFwNqYUEk/UvaXplore?node-id=31-316&t=XRqJoXw6tKHGjci7-1',
         featured: true,  // ← Add this to feature it on the home page
     },
 ];

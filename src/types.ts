@@ -33,6 +33,21 @@ export interface DetailedProject {
   demoUrl: string;
   liveUrl?: string;
   featured?: boolean;
+  caseStudy?: CaseStudy;
+}
+
+export interface CaseStudy {
+  overview: string;
+  problem: string;
+  solution: string;
+  visualDesign: {
+    colorDirection: string;
+    typography: string;
+  };
+  designDecisions: string[];
+  challenges: string[];
+  outcome: string;
+  finalNote?: string;
 }
 
 export interface ContactInfo {
