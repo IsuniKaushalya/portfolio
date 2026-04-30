@@ -62,11 +62,43 @@ const Home: React.FC = () => {
                         Isuni Kaushalya
                     </h1>
                     <p className="text-text-secondary dark:text-slate-400 mt-2 text-lg">
-                        UI/UX Enthusiast | Passionate Photographer
+                        UI/UX Enthusiast | Passionate about Frontend Developer
                     </p>
-                    <p className="text-text-secondary dark:text-slate-400 mt-4 max-w-2xl">
-                        Hi, I’m Isuni Kaushalya, I am currently pursuing a BSc. (Hons) in Computer Science and Technology at Uva Wellassa University of Sri Lanka. I am passionate about exploring modern technologies, especially in areas such as software development, artificial intelligence, and web technologies. Alongside my academic interests, I am also passionate about photography, which helps me stay creative and detail oriented. I am eager to apply my knowledge and skills in a practical environment and looking forward to gaining valuable industry experience through an internship opportunity.
-                    </p>
+                    <div className="mt-5 max-w-3xl space-y-4 text-left">
+                        <div className="rounded-2xl border border-border-color bg-surface/80 p-5 shadow-sm backdrop-blur-sm dark:border-violet-800 dark:bg-slate-800/80">
+                            <p className="text-text-secondary dark:text-slate-400 text-sm uppercase tracking-[0.2em]">About Me</p>
+                            <p className="mt-2 text-text-primary dark:text-slate-50 text-lg font-medium leading-8">
+                                I turn complex ideas into simple, intuitive experiences, combining frontend development and NLP research with a balance of logic and empathy.
+                            </p>
+                        </div>
+
+                        <div className="grid gap-4 md:grid-cols-2">
+                            <div className="rounded-2xl border border-border-color bg-background p-5 dark:border-violet-800 dark:bg-slate-900/60">
+                                <h3 className="text-sm font-semibold uppercase tracking-wider text-primary">Design Mindset</h3>
+                                <p className="mt-2 text-sm leading-7 text-text-secondary dark:text-slate-400">
+                                    I focus on making things not only look good, but actually work for people.
+                                </p>
+                            </div>
+                            <div className="rounded-2xl border border-border-color bg-background p-5 dark:border-violet-800 dark:bg-slate-900/60">
+                                <h3 className="text-sm font-semibold uppercase tracking-wider text-primary">Teaching & Mentoring</h3>
+                                <p className="mt-2 text-sm leading-7 text-text-secondary dark:text-slate-400">
+                                    Teaching mathematics and volunteering as a Dhamma school teacher taught me how to break down complexity and guide users clearly.
+                                </p>
+                            </div>
+                            <div className="rounded-2xl border border-border-color bg-background p-5 dark:border-violet-800 dark:bg-slate-900/60">
+                                <h3 className="text-sm font-semibold uppercase tracking-wider text-primary">Creative Rhythm</h3>
+                                <p className="mt-2 text-sm leading-7 text-text-secondary dark:text-slate-400">
+                                    Being part of the university Dancing Circle keeps my design approach smooth, balanced, and engaging.
+                                </p>
+                            </div>
+                            <div className="rounded-2xl border border-border-color bg-background p-5 dark:border-violet-800 dark:bg-slate-900/60">
+                                <h3 className="text-sm font-semibold uppercase tracking-wider text-primary">What I’m Looking For</h3>
+                                <p className="mt-2 text-sm leading-7 text-text-secondary dark:text-slate-400">
+                                    Opportunities to grow as a designer and contribute to impactful, user-centered products.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                     <div className="flex items-center justify-center md:justify-start gap-4 mt-6">
                         {SOCIAL_LINKS.map((link: SocialLink) => (
                             <a

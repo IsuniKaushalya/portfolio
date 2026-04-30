@@ -3,147 +3,82 @@ import { DETAILED_PROJECTS_DATA, ExternalLinkIcon } from '../constants';
 import type { DetailedProject } from '../types';
 import ImageModal from './ImageModal';
 
-const CaseStudyModal: React.FC<{ project: DetailedProject; onClose: () => void }> = ({ project, onClose }) => {
-    useEffect(() => {
-        const handleEscape = (event: KeyboardEvent) => {
-            if (event.key === 'Escape') {
-                onClose();
-            }
-        };
-
-        document.addEventListener('keydown', handleEscape);
-
-        return () => {
-            document.removeEventListener('keydown', handleEscape);
-        };
-    }, [onClose]);
-
-    return (
-        <div
-            className="fixed inset-0 z-[9999] flex items-center justify-center bg-black bg-opacity-80 p-4"
-            onClick={onClose}
-        >
-            <div
-                className="relative w-full max-w-5xl overflow-hidden rounded-3xl border border-border-color bg-surface shadow-2xl dark:border-violet-800 dark:bg-slate-800"
-                onClick={(event) => event.stopPropagation()}
-            >
-                <button
-                    onClick={onClose}
-                    className="absolute right-4 top-4 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white text-text-primary shadow-lg transition hover:bg-gray-100 dark:bg-slate-900 dark:text-slate-50 dark:hover:bg-slate-700"
-                    aria-label="Close case study"
-                >
-                    <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </button>
-
-                <div className="grid grid-cols-1 lg:grid-cols-5">
-                    <div className="lg:col-span-2 overflow-hidden">
-                        <img src={project.image} alt={project.title} className="h-64 w-full object-cover lg:h-full" />
-                    </div>
-
-                    <div className="lg:col-span-3 p-6 md:p-8">
-                        <span className="inline-flex rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary">
-                            Case Study
-                        </span>
-                        <h3 className="mt-4 text-3xl font-bold text-text-primary dark:text-slate-50">{project.title}</h3>
-                        {project.caseStudy ? (
-                            <div className="mt-4 space-y-5 text-sm leading-7 text-text-secondary dark:text-slate-400">
-                                <section>
-                                    <h4 className="text-base font-semibold text-text-primary dark:text-slate-50">Overview</h4>
-                                    <p className="mt-2">{project.caseStudy.overview}</p>
-                                </section>
-
-                                <section>
-                                    <h4 className="text-base font-semibold text-text-primary dark:text-slate-50">Problem</h4>
-                                    <p className="mt-2 whitespace-pre-line">{project.caseStudy.problem}</p>
-                                </section>
-
-                                <section>
-                                    <h4 className="text-base font-semibold text-text-primary dark:text-slate-50">Solution</h4>
-                                    <p className="mt-2">{project.caseStudy.solution}</p>
-                                </section>
-
-                                <section>
-                                    <h4 className="text-base font-semibold text-text-primary dark:text-slate-50">Visual Design</h4>
-                                    <div className="mt-2 space-y-3 rounded-2xl border border-border-color bg-background p-4 dark:border-violet-800 dark:bg-slate-900/60">
-                                        <div>
-                                            <p className="font-semibold text-text-primary dark:text-slate-50">Color Direction</p>
-                                            <p className="mt-1">{project.caseStudy.visualDesign.colorDirection}</p>
-                                        </div>
-                                        <div>
-                                            <p className="font-semibold text-text-primary dark:text-slate-50">Typography</p>
-                                            <p className="mt-1">{project.caseStudy.visualDesign.typography}</p>
-                                        </div>
-                                    </div>
-                                </section>
-
-                                <section>
-                                    <h4 className="text-base font-semibold text-text-primary dark:text-slate-50">Design Decisions</h4>
-                                    <ul className="mt-2 list-disc space-y-1 pl-5">
-                                        {project.caseStudy.designDecisions.map((item) => (
-                                            <li key={item}>{item}</li>
-                                        ))}
-                                    </ul>
-                                </section>
-
-                                <section>
-                                    <h4 className="text-base font-semibold text-text-primary dark:text-slate-50">Challenges</h4>
-                                    <ul className="mt-2 list-disc space-y-1 pl-5">
-                                        {project.caseStudy.challenges.map((item) => (
-                                            <li key={item}>{item}</li>
-                                        ))}
-                                    </ul>
-                                </section>
-
-                                <section>
-                                    <h4 className="text-base font-semibold text-text-primary dark:text-slate-50">Outcome</h4>
-                                    <p className="mt-2">{project.caseStudy.outcome}</p>
-                                </section>
-
-                                {project.caseStudy.finalNote && (
-                                    <section>
-                                        <h4 className="text-base font-semibold text-text-primary dark:text-slate-50">Final Note</h4>
-                                        <p className="mt-2">{project.caseStudy.finalNote}</p>
-                                    </section>
-                                )}
-                            </div>
-                        ) : (
-                            <p className="mt-4 text-sm leading-7 text-text-secondary dark:text-slate-400">
-                                {project.description}
-                            </p>
-                        )}
-
-                        <div className="mt-8 flex flex-wrap gap-3">
-                            {project.demoUrl && (
-                                <a
-                                    href={project.demoUrl}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex items-center justify-center rounded-full bg-primary px-5 py-3 text-sm font-bold text-white transition-transform duration-200 hover:scale-105"
-                                >
-                                    View Demo
-                                    <ExternalLinkIcon />
-                                </a>
-                            )}
-                            {project.liveUrl && (
-                                <a
-                                    href={project.liveUrl}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex items-center justify-center rounded-full bg-text-primary px-5 py-3 text-sm font-bold text-background transition-transform duration-200 hover:scale-105 dark:bg-slate-200 dark:text-slate-900"
-                                >
-                                    Live Site
-                                    <ExternalLinkIcon />
-                                </a>
-                            )}
-                        </div>
-                    </div>
-                </div>
-            </div>
+const CaseStudyContent: React.FC<{ project: DetailedProject }> = ({ project }) => (
+    <div className="mt-6 rounded-2xl border border-border-color bg-background p-5 dark:border-violet-800 dark:bg-slate-900/60">
+        <div className="mb-4 flex items-center justify-between gap-2">
+            <span className="inline-flex rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary">
+                Case Study
+            </span>
         </div>
-    );
-};
+
+        <div className="max-h-[26rem] overflow-y-auto pr-2">
+            {project.caseStudy ? (
+                <div className="space-y-5 text-sm leading-7 text-text-secondary dark:text-slate-400">
+                    <section>
+                        <h4 className="text-base font-semibold text-text-primary dark:text-slate-50">Overview</h4>
+                        <p className="mt-2">{project.caseStudy.overview}</p>
+                    </section>
+
+                    <section>
+                        <h4 className="text-base font-semibold text-text-primary dark:text-slate-50">Problem</h4>
+                        <p className="mt-2 whitespace-pre-line">{project.caseStudy.problem}</p>
+                    </section>
+
+                    <section>
+                        <h4 className="text-base font-semibold text-text-primary dark:text-slate-50">Solution</h4>
+                        <p className="mt-2">{project.caseStudy.solution}</p>
+                    </section>
+
+                    <section>
+                        <h4 className="text-base font-semibold text-text-primary dark:text-slate-50">Visual Design</h4>
+                        <div className="mt-2 space-y-3 rounded-2xl border border-border-color bg-surface p-4 dark:border-violet-800 dark:bg-slate-900">
+                            <div>
+                                <p className="font-semibold text-text-primary dark:text-slate-50">Color Direction</p>
+                                <p className="mt-1">{project.caseStudy.visualDesign.colorDirection}</p>
+                            </div>
+                            <div>
+                                <p className="font-semibold text-text-primary dark:text-slate-50">Typography</p>
+                                <p className="mt-1">{project.caseStudy.visualDesign.typography}</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h4 className="text-base font-semibold text-text-primary dark:text-slate-50">Design Decisions</h4>
+                        <ul className="mt-2 list-disc space-y-1 pl-5">
+                            {project.caseStudy.designDecisions.map((item) => (
+                                <li key={item}>{item}</li>
+                            ))}
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h4 className="text-base font-semibold text-text-primary dark:text-slate-50">Challenges</h4>
+                        <ul className="mt-2 list-disc space-y-1 pl-5">
+                            {project.caseStudy.challenges.map((item) => (
+                                <li key={item}>{item}</li>
+                            ))}
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h4 className="text-base font-semibold text-text-primary dark:text-slate-50">Outcome</h4>
+                        <p className="mt-2">{project.caseStudy.outcome}</p>
+                    </section>
+
+                    {project.caseStudy.finalNote && (
+                        <section>
+                            <h4 className="text-base font-semibold text-text-primary dark:text-slate-50">Final Note</h4>
+                            <p className="mt-2">{project.caseStudy.finalNote}</p>
+                        </section>
+                    )}
+                </div>
+            ) : (
+                <p className="text-sm leading-7 text-text-secondary dark:text-slate-400">{project.description}</p>
+            )}
+        </div>
+    </div>
+);
 
 const ProjectCard: React.FC<{ project: DetailedProject }> = ({ project }) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -186,10 +121,10 @@ const ProjectCard: React.FC<{ project: DetailedProject }> = ({ project }) => {
                         )}
                         <button
                             type="button"
-                            onClick={() => setIsCaseStudyOpen(true)}
+                            onClick={() => setIsCaseStudyOpen((current) => !current)}
                             className="inline-flex items-center justify-center px-6 py-3 border border-border-color dark:border-violet-800 text-text-primary dark:text-slate-50 font-bold rounded-full transition-transform duration-200 hover:scale-105 hover:bg-border-color dark:hover:bg-slate-700"
                         >
-                            Case Study
+                            {isCaseStudyOpen ? 'Hide Case Study' : 'Case Study'}
                         </button>
                         {project.liveUrl && (
                             <a
@@ -204,6 +139,8 @@ const ProjectCard: React.FC<{ project: DetailedProject }> = ({ project }) => {
                         )}
                     </div>
                 </div>
+
+                {isCaseStudyOpen && <CaseStudyContent project={project} />}
             </div>
 
             {isModalOpen && (
@@ -214,9 +151,6 @@ const ProjectCard: React.FC<{ project: DetailedProject }> = ({ project }) => {
                 />
             )}
 
-            {isCaseStudyOpen && (
-                <CaseStudyModal project={project} onClose={() => setIsCaseStudyOpen(false)} />
-            )}
         </>
     );
 };
