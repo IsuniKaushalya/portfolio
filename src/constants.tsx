@@ -11,11 +11,14 @@ import project1 from './images/project1.png';
 import project3 from './images/project3.png';
 import project4 from './images/project4.png';
 import img1 from './images/img1.jpg';
-import img2 from './images/img2.jpg';
-import img3 from './images/img3.jpg';
+import img2 from './images/img2.jpeg';
+import img3 from './images/img3.jpeg';
 import img4 from './images/img4.jpg';
-import img6 from './images/img6.jpg';
-import img7 from './images/img7.jpg';
+import img5 from './images/img5.jpeg';
+import img6 from './images/img6.jpeg';
+import img7 from './images/img7.jpeg';
+import img8 from './images/img8.jpeg';
+import img9 from './images/img9.jpeg';
 // Generic Icon component props
 interface IconProps {
     className?: string;
@@ -124,12 +127,15 @@ export const CONTACT_PAGE_LINKS: SocialLink[] = [
 ];
 
 export const GALLERY_IMAGES: string[] = [
-    img7,
     img1,
     img2,
     img3,
     img4,
+    img5,
     img6,
+    img7,
+    img8,
+    img9,
 ];
 
 export const EDUCATION_DATA: Education[] = [
