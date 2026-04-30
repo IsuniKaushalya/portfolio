@@ -54,18 +54,18 @@ const Home: React.FC = () => {
             <div className="flex flex-col md:flex-row items-center justify-center gap-12 mb-16">
                 <img
                     src={mainImage}
-                    alt="Tharindu Devinda"
+                    alt="Isuni Kaushalya"
                     className="rounded-2xl w-40 h-45 md:w-40 md:h-45 object-cover shadow-lg border-2 border-border-color dark:border-violet-800 shrink-0"
                 />
                 <div className="text-center md:text-left">
                     <h1 className="text-4xl md:text-5xl font-bold text-text-primary dark:text-slate-50">
-                        Tharindu Devinda
+                        Isuni Kaushalya
                     </h1>
                     <p className="text-text-secondary dark:text-slate-400 mt-2 text-lg">
-                        Software Engineering & AI Enthusiast | Passionate Photographer
+                        UI/UX Enthusiast | Passionate Photographer
                     </p>
                     <p className="text-text-secondary dark:text-slate-400 mt-4 max-w-2xl">
-                        Hi, I’m Tharindu devinda, I am currently pursuing a BSc. (Hons) in Computer Science and Technology at Uva Wellassa University of Sri Lanka. I am passionate about exploring modern technologies, especially in areas such as software development, artificial intelligence, and web technologies. Alongside my academic interests, I am also passionate about photography, which helps me stay creative and detail oriented. I am eager to apply my knowledge and skills in a practical environment and looking forward to gaining valuable industry experience through an internship opportunity.
+                        Hi, I’m Isuni Kaushalya, I am currently pursuing a BSc. (Hons) in Computer Science and Technology at Uva Wellassa University of Sri Lanka. I am passionate about exploring modern technologies, especially in areas such as software development, artificial intelligence, and web technologies. Alongside my academic interests, I am also passionate about photography, which helps me stay creative and detail oriented. I am eager to apply my knowledge and skills in a practical environment and looking forward to gaining valuable industry experience through an internship opportunity.
                     </p>
                     <div className="flex items-center justify-center md:justify-start gap-4 mt-6">
                         {SOCIAL_LINKS.map((link: SocialLink) => (
@@ -77,7 +77,7 @@ const Home: React.FC = () => {
                                 aria-label={link.name}
                                 className="text-text-secondary dark:text-slate-400 hover:text-primary transition-colors"
                             >
-                                {React.cloneElement(link.icon, { className: 'h-6 w-6' })}
+                                {React.cloneElement(link.icon as React.ReactElement<any>, { className: 'h-6 w-6' })}
                             </a>
                         ))}
                     </div>

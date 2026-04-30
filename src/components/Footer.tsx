@@ -26,7 +26,7 @@ const Footer: React.FC<FooterProps> = ({ setActiveSection }) => {
             </button>
           ))}
         </div>
-        <p className="text-sm text-text-secondary dark:text-slate-400 text-center">&copy; {new Date().getFullYear()} Tharindu Devinda. All rights reserved.</p>
+        <p className="text-sm text-text-secondary dark:text-slate-400 text-center">&copy; {new Date().getFullYear()} Isuni Kaushalya. All rights reserved.</p>
       </div>
     </footer>
   );
