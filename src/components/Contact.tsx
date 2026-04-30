@@ -52,7 +52,7 @@ const Contact: React.FC = () => {
                             className="bg-surface dark:bg-slate-800 p-6 rounded-2xl flex flex-col items-center justify-center gap-4 border border-border-color dark:border-violet-800 group transition-all duration-300 hover:border-primary hover:-translate-y-2"
                         >
                             <div className="text-primary group-hover:text-primary transition-colors duration-300">
-                                {React.cloneElement(link.icon, { className: 'h-10 w-10' })}
+                                {React.cloneElement(link.icon as React.ReactElement<any>, { className: 'h-10 w-10' })}
                             </div>
                             <span className="font-semibold text-text-primary dark:text-slate-50">{link.name}</span>
                         </a>

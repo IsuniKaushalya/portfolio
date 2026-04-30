@@ -83,6 +83,12 @@ export const MailIcon: React.FC<IconProps> = ({ className = "h-6 w-6" }) => (
     </svg>
 );
 
+export const BehanceIcon: React.FC<IconProps> = ({ className = "h-6 w-6" }) => (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+        <path d="M6.938 4.503c.846-.677 1.897-1.003 3.161-1.003.469 0 .928.055 1.378.164.45.109.866.289 1.25.538.382.249.696.569.94.96.245.391.408.874.488 1.45h2.913c-.043-.868-.269-1.673-.678-2.415-.408-.742-1.01-1.377-1.806-1.905-.796-.528-1.755-.925-2.878-1.19C10.049.088 8.858 0 7.513 0c-1.523 0-2.894.276-4.114.829-1.22.553-2.252 1.336-3.096 2.348-.844 1.012-1.481 2.234-1.913 3.666C-.04 8.394-.127 9.818-.127 11.38c0 1.562.087 2.986.262 4.271.175 1.286.559 2.506 1.152 3.661.593 1.155 1.449 2.084 2.567 2.787 1.119.703 2.569 1.054 4.349 1.054 1.271 0 2.418-.156 3.44-.469 1.022-.313 1.883-.794 2.583-1.444.7-.65 1.236-1.461 1.608-2.433.372-.972.534-2.1.484-3.384h-2.935c.053.633.173 1.196.36 1.688.187.492.47.906.849 1.242.379.336.852.594 1.419.775.567.181 1.223.271 1.97.271 1.086 0 1.997-.184 2.735-.553.738-.369 1.312-.885 1.723-1.548.411-.663.67-1.443.775-2.341.105-.898.157-1.899.157-3.003 0-1.104-.052-2.105-.157-3.003-.105-.898-.364-1.678-.775-2.341-.411-.663-.985-1.179-1.723-1.548-.738-.369-1.649-.553-2.735-.553-.747 0-1.403.09-1.97.271-.567.181-1.04.439-1.419.775-.379.336-.662.75-.849 1.242-.187.492-.307 1.055-.36 1.688h2.935c.05-1.284-.112-2.412-.484-3.384-.372-.972-.908-1.783-1.608-2.433-.7-.65-1.561-1.131-2.583-1.444-1.022-.313-2.169-.469-3.44-.469-1.78 0-3.23.351-4.349 1.054-1.118.703-1.974 1.632-2.567 2.787-.593 1.155-.977 2.375-1.152 3.661-.175 1.285-.262 2.709-.262 4.271 0 1.562.087 2.986.262 4.271.175 1.286.559 2.506 1.152 3.661.593 1.155 1.449 2.084 2.567 2.787 1.119.703 2.569 1.054 4.349 1.054 1.271 0 2.418-.156 3.44-.469 1.022-.313 1.883-.794 2.583-1.444.7-.65 1.236-1.461 1.608-2.433.372-.972.534-2.1.484-3.384h2.935c.05 1.284-.112 2.412-.484 3.384-.372.972-.908 1.783-1.608 2.433-.7.65-1.561 1.131-2.583 1.444-1.022.313-2.169.469-3.44.469-1.78 0-3.23-.351-4.349-1.054-1.118-.703-1.974-1.632-2.567-2.787-.593-1.155-.977-2.375-1.152-3.661-.175-1.285-.262-2.709-.262-4.271 0-1.562.087-2.986.262-4.271.175-1.286.559-2.506 1.152-3.661.593-1.155 1.449-2.084 2.567-2.787 1.119-.703 2.569-1.054 4.349-1.054zm0 0" />
+    </svg>
+);
+
 
 export const MoonIcon: React.FC<IconProps> = ({ className = "h-6 w-6" }) => (
     <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -105,18 +111,16 @@ export const NAV_LINKS: NavLink[] = [
 ];
 
 export const SOCIAL_LINKS: SocialLink[] = [
-    { name: 'LinkedIn', icon: <LinkedinIcon />, url: 'https://www.linkedin.com/in/tharindu-devinda-978905278/' },
-    { name: 'GitHub', icon: <GithubIcon />, url: 'https://github.com/Tharindu-devinda' },
-    { name: 'Facebook', icon: <FacebookIcon />, url: 'https://www.facebook.com/share/1AEyQEMP6R/' },
-    { name: 'Instagram', icon: <InstagramIcon />, url: 'https://www.instagram.com/tharux_x5?igsh=OGQ5ZDc2ODk2ZA==' },
+    { name: 'LinkedIn', icon: <LinkedinIcon />, url: 'https://www.linkedin.com/in/isuni-kaushalya-70944537b' },
+    { name: 'GitHub', icon: <GithubIcon />, url: 'https://github.com/IsuniKaushalya' },
+    { name: 'Behance', icon: <BehanceIcon />, url: 'https://www.behance.net/isuni-kaushalya' },
 ];
 
 export const CONTACT_PAGE_LINKS: SocialLink[] = [
     { name: 'Email', icon: <MailIcon />, url: 'https://mail.google.com/mail/?view=cm&fs=1&to=tharindudevinda629@gmail.com' },
-    { name: 'LinkedIn', icon: <LinkedinIcon />, url: 'https://www.linkedin.com/in/tharindu-devinda-978905278/' },
-    { name: 'GitHub', icon: <GithubIcon />, url: 'https://github.com/Tharindu-devinda' },
-    { name: 'Facebook', icon: <FacebookIcon />, url: 'https://www.facebook.com/share/1AEyQEMP6R/' },
-    { name: 'Instagram', icon: <InstagramIcon />, url: 'https://www.instagram.com/tharux_x5?igsh=OGQ5ZDc2ODk2ZA==' },
+    { name: 'LinkedIn', icon: <LinkedinIcon />, url: 'https://www.linkedin.com/in/isuni-kaushalya-70944537b' },
+    { name: 'GitHub', icon: <GithubIcon />, url: 'https://github.com/IsuniKaushalya' },
+    { name: 'Behance', icon: <BehanceIcon />, url: 'https://www.behance.net/isuni-kaushalya' },
 ];
 
 export const GALLERY_IMAGES: string[] = [
