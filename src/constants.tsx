@@ -246,6 +246,29 @@ export const DETAILED_PROJECTS_DATA: DetailedProject[] = [
         tags: ['Mobile Design', 'UI/UX Design', 'Figma'],
         demoUrl: 'https://www.behance.net/gallery/245185169/FoodPick-Mobile-UI-Design-Practice',
         featured: true,  // ← Add this to feature it on the home page
+        caseStudy: {
+            overview: 'FoodPick is a mobile UI design project focused on creating a clean and engaging food delivery experience. The design emphasizes visual hierarchy, simplicity, and ease of navigation, allowing users to quickly browse food items and make decisions without friction. The primary focus was to design a modern home screen where food becomes the central element while keeping essential information clear and accessible.',
+            problem: 'Many food delivery apps present too much information at once, leading to cluttered interfaces, difficulty in quickly choosing items, and poor visibility of important details like price and ratings. This affects user experience and slows down decision-making.',
+            solution: 'FoodPick addresses these issues by prioritizing food visuals to capture attention, structuring content using a clean card-based layout, displaying key details such as price, rating, and name clearly and consistently, and using familiar mobile navigation patterns for easy interaction. The goal was to create a smooth and intuitive browsing experience.',
+            visualDesign: {
+                colorDirection: 'The design uses a bold red as the primary color to create strong visual emphasis and brand identity, mainly for key UI elements such as navigation and active states. Green is used specifically for pricing to create clear distinction and indicate value. Neutral tones are used for backgrounds and text to maintain balance and readability.',
+                typography: 'A clear hierarchy is maintained throughout the interface with larger text for food names, medium-sized text for ratings and details, and smaller text for supporting information so users can scan content quickly.',
+            },
+            designDecisions: [
+                'High-fidelity imagery to prioritize food visuals',
+                '2-column grid layout for efficient and balanced spacing',
+                'Card-based design to separate content clearly',
+                'Search and category filters for faster discovery',
+                'Bottom navigation for familiar mobile interactions',
+            ],
+            challenges: [
+                'Balancing strong visuals with a clean layout',
+                'Maintaining consistency across multiple components',
+                'Ensuring key information stays visible without clutter',
+            ],
+            outcome: 'The final design delivers a clean and user-friendly interface that highlights food items effectively while maintaining clarity and structure. It improves the browsing experience and makes decision-making faster for users.',
+            finalNote: 'This project helped improve skills in mobile UI design, layout systems, and creating visually engaging yet functional user interfaces.',
+        },
     },
     {
         image: project5,
