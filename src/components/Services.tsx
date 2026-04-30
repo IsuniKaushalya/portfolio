@@ -3,7 +3,7 @@ import { ARTICLES_DATA } from '../constants';
 import type { Article } from '../types';
 
 const CertificationCard: React.FC<{ article: Article }> = ({ article }) => {
-    const cardClass = "block bg-surface dark:bg-slate-800 rounded-2xl shadow-lg overflow-hidden group border border-border-color dark:border-violet-800";
+    const cardClass = "block bg-surface dark:bg-slate-800 rounded-2xl shadow-lg overflow-hidden group border border-border-color dark:border-violet-800 transition-all duration-300 ease-out transform hover:-translate-y-2 hover:shadow-2xl hover:border-primary";
 
     const content = (
         <div className="flex flex-col md:flex-row">
